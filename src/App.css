@@ -1,0 +1,141 @@
+.startGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  gap: 3rem;
+}
+.startGame .start {
+  justify-content: center;
+}
+input {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #7f7f7f;
+  outline: none;
+}
+
+.msg {
+  padding-bottom: 2rem;
+  color: #fff;
+  text-align: center;
+  height: 7rem;
+  animation: show 3s;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  gap: 1rem;
+  animation: grow 0.5s ease-in;
+
+  transition: all 1s;
+}
+.container_restart {
+  animation: show 3s;
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+.block {
+  max-height: 100px;
+  max-width: 100px;
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #7f7f7f;
+  transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.block:hover {
+  background-color: #16bdca;
+}
+.historic {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  gap: 1rem;
+  width: 100%;
+  height: 8rem;
+}
+
+.historic div {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  font-weight: 900;
+  background-color: #7f7f7f;
+  border-radius: 15px;
+  color: #149fa9;
+  cursor: pointer;
+}
+.restart,
+.return,
+.start {
+  outline: 0;
+  border: none;
+  width: 10rem;
+  background-color: #7f7f7f;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: grow 0.5s ease-in;
+}
+.fa-rotate-right {
+  font-weight: 900;
+}
+.restart:hover,
+.start:hover,
+.return:hover {
+  transform: translateY(-3px);
+}
+.restart:active,
+.start:active,
+.return:active {
+  transform: translateY(0px);
+}
+.return {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.gameLogic {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
