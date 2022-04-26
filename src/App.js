@@ -90,15 +90,12 @@ export default function App({ player }) {
     });
   };
 
-  console.log(game);
-  console.log(game[historic]);
-
   let tic = game[historic].map((elem, i) => (
     <div className="block" key={i} onClick={won ? null : load} id={i}>
       {elem}
     </div>
   ));
-  console.log(game[historic]);
+
   let historicc =
     game.length > 1 &&
     [...game.slice(1), 2].map((elem, i) => (
