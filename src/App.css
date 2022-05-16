@@ -39,7 +39,7 @@ input {
   grid-template-rows: 100px 100px 100px;
   gap: 1rem;
   animation: grow 0.5s ease-in;
-
+  margin: 0 auto;
   transition: all 1s;
 }
 .container_restart {
@@ -104,6 +104,7 @@ input {
 .start {
   outline: 0;
   border: none;
+  text-decoration: none;
   width: 10rem;
   background-color: #7f7f7f;
   padding: 1rem;
@@ -114,6 +115,9 @@ input {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   animation: grow 0.5s ease-in;
+}
+.start {
+  animation: none;
 }
 .fa-rotate-right {
   font-weight: 900;
@@ -133,8 +137,12 @@ input {
   top: 5%;
   left: 5%;
 }
+.return_button {
+  color: #000;
+  text-decoration: none;
+}
 .gameLogic {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
